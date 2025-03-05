@@ -10,7 +10,7 @@ import connectDB from "./config/database";
 dotenv.config();
 const app = express();
 
-connectDB(); // Connects to MongoDB
+connectDB(); 
 
 app.use(helmet());
 app.use(cors());
