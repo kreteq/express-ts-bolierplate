@@ -7,12 +7,8 @@ import { errorHandler } from "./middlewares/errorHandler";
 import logger from "./libs/Logger";
 import connectDB from "./config/database";
 
-
-import userRoutes from "./routes/userRoutes";
-import authRoutes from "./routes/authRoutes";
-
 import v1Routes from './routes/api/v1';
-authRoutes
+
 
 dotenv.config();
 const app = express();
@@ -30,9 +26,6 @@ app.use(express.json());
 app.use('/api',v1Routes)
 
 app.use(errorHandler);
-
-
-
 // Start server after connecting to the database
 const PORT = process.env.PORT || 3000;
 const startServer = async () => {
